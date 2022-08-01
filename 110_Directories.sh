@@ -104,7 +104,7 @@ cp -r Bibata-Modern-Amber ~/.icons
 cp -r Bibata-Modern-Classic ~/.icons
 
 cd xfce4
-cp -r * ~/.config/xfce
+cp -r * ~/.config/xfce4
 cd ..
 
 cp Xresources ~/.Xresources

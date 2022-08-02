@@ -37,8 +37,8 @@ super + F5
 super + x
 	~/log.sh
 
-super + k
-	polybar-msg cmd toggle
+#super + k
+	#polybar-msg cmd toggle
 
 F2
 	jgmenu_run

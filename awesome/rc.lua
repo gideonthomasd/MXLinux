@@ -365,7 +365,7 @@ globalkeys = gears.table.join(
               {description = "run dmenu", group = "launcher"}),
               
     awful.key({ },            "F9",     function () 
-    awful.spawn("brave") end,
+    awful.spawn("brave-browser") end,
               {description = "brave browser", group = "apps"}),
               
     awful.key({ },            "F12",     function () 

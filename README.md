@@ -2,8 +2,10 @@
 Install into MXLinux
 
 sudo apt update
+
 ./100 ...
-./110 ...
+
+./110 ...   etc
 
 In xfce remove conky and parcellite from init.
 

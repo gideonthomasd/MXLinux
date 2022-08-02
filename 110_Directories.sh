@@ -81,7 +81,11 @@ cd font3
 cp -r * ~/.local/share/fonts
 cd ..
 
-###########################################
+######### Wallpapers ######################
+mkdir -p ~/Pictures/wallpapers
+cd wallpapers
+cp -r * ~/Pictures/wallpapers
+cd ..
 
 ####### Install jgmenu ####################
 

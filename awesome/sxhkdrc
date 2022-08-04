@@ -32,7 +32,7 @@ super + F4
 	rofi -show drun -show-icons
 	
 super + F5
-	blueberry
+	blueman-manager
 	
 super + x
 	~/log.sh

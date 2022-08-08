@@ -180,11 +180,13 @@ awful.screen.connect_for_each_screen(function(s)
     set_wallpaper(s)
 
     -- Each screen has its own tag table.
- awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
---local names = {"", "", "", "", "", "", "7", "8", "9" }
---local l = awful.layout.suit
---local layouts = { l.tile, l.max, l.max.fullscreen, l.floating, l.magnifier }
---awful.tag(names, s, layouts)
+ --awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
+ ---------------------------------------------------------------------------------------------------
+local names = {"  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  " }
+local l = awful.layout.suit
+local layouts = { l.tile, l.max, l.max.fullscreen, l.floating, l.magnifier }
+awful.tag(names, s, layouts)
+-----------------------------------------------------------------------------------------------------
     -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()
     -- Create an imagebox widget which will contain an icon indicating which layout we're using.
@@ -215,7 +217,7 @@ awful.screen.connect_for_each_screen(function(s)
     -- Add widgets to the wibox
     --local my_image = wibox.widget.imagebox("/home/phil/.config/awesome/ram.png", true)
     myicon = awful.widget.launcher({ image = "/home/phil/.config/awesome/menu.png", command = "/home/phil/.config/rofi/launchers/colorful/launcher.sh" })
-    mymusic = awful.widget.launcher({ image = "/home/phil/.config/awesome/music.png", command = "mocp -G" })
+    --mymusic = awful.widget.launcher({ image = "/home/phil/.config/awesome/music.png", command = "mocp -G" })
     myweather = awful.widget.launcher({ image = "/home/phil/.config/awesome/weather.png", command = "lxterminal -e 'curl wttr.in/Caerphilly && read'" })
     myram = awful.widget.launcher({ image = "/home/phil/.config/awesome/ram2.png", command = "lxterminal -e htop" })
     mycalendar = awful.widget.launcher({ image = "/home/phil/.config/awesome/calendar.png", command = "lxterminal -e calcurse" })
@@ -236,27 +238,37 @@ awful.screen.connect_for_each_screen(function(s)
         layout = wibox.layout.align.horizontal,
         { -- Left widgets
             layout = wibox.layout.fixed.horizontal,
+            space, 
             myicon,
             space,
- --           mylauncher,
+            
             s.mytaglist,
-            s.mypromptbox,
+ --           mylauncher,
+  --          s.mytaglist,
+ --           s.mypromptbox,
+			space,
+			volume_widget(),
+            space,
         },
-        s.mytasklist, -- Middle widget
+       s.mytasklist, -- Middle widget
+		
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
-            volume_widget(),
+        --    s.mytasklist, -- Middle widget
         -- customized
+			space,
+            myweather,
+            awful.widget.watch("/home/phil/.config/awesome/dwmweather.sh" ,600),
+           -- space,
             space,
             mydownload,
             awful.widget.watch("/home/phil/.config/awesome/updates.sh" ,600),
             space,
-            myweather,
-            awful.widget.watch("/home/phil/.config/awesome/dwmweather.sh" ,600),
-            space,
-            mymusic,
-            awful.widget.watch("/home/phil/.config/awesome/music_state.sh" ,1),
-            space,
+            
+          --  space,
+          --  mymusic,
+          --  awful.widget.watch("/home/phil/.config/awesome/music_state.sh" ,1),
+          --  space,
 --            mytext,
 			myram,
             awful.widget.watch('bash -c "free -h | awk \'/^Mem/ {print $3}\'"' ,1),  
@@ -264,7 +276,9 @@ awful.screen.connect_for_each_screen(function(s)
             space,
 --            mytext_date,
 			mycalendar,
-            mytextclock,
+			--date +"%H:%M (%d)"
+			awful.widget.watch('date +"%H:%M (%d)"',5),
+          --  mytextclock,
             space,
             
                     
@@ -653,6 +667,7 @@ beautiful.useless_gap = 5
 
 -- Autostart
 --awful.spawn.with_shell("~/.config/awesome/polybar/launch.sh")
+awful.spawn.with_shell("clementine")
 awful.spawn.with_shell("parcellite")
 
 --awful.spawn.with_shell("picom --config ~/.config/awesome/picom.conf")

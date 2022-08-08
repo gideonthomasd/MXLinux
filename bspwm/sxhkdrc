@@ -37,12 +37,14 @@ super + F5
 super + x
 	~/log.sh
 
+F2
+	jgmenu_run
 
 F9
     brave-browser
 
 F10
-	jgmenu_run
+	pamac-manager
 
 F11
         xfce4-terminal --drop-down
@@ -81,8 +83,8 @@ super + {_,shift + }@space
 
 
 	
-#F1
-	#lxterminal - e 'cat ~/help && read'
+F1
+	lxterminal - e 'cat ~/help && read'
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd

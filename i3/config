@@ -16,8 +16,8 @@ set $mod Mod4
 #font pango: Mononoki Nerd Font 10
 #font pango: Mononoki Nerd Font 15
 #monospace 8
-exec_always pkill -f testwallpaper
-exec_always pkill -f sleep
+#exec_always pkill -f testwallpaper
+#exec_always pkill -f sleep
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 font pango:DejaVu Sans Mono 8
@@ -242,13 +242,15 @@ client.focused          #bf616a #cecece #000000 #FF0000 #99004C
 
 
 # My commands
+exec_always clementine
 exec_always lxpolkit
 exec_always sxhkd -c /home/phil/.config/i3/sxhkdrc
 #exec_always xcompmgr
 exec_always picom
-#exec_always feh --bg-scale --randomize ~/Pictures/wallpapers/*
+exec_always parcellite
+exec_always feh --bg-scale ~/Pictures/wallpapers/i3.jpg
 #exec_always /home/phil/.config/i3/testwallpaper
-#exec_always blueman-applet
+exec_always blueman-applet
 exec_always nm-applet
 
 exec_always $HOME/.config/i3/bin/launchbar.sh

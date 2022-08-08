@@ -6,7 +6,7 @@ updates=$(aptitude search "~U" | wc -l)
 #else
 #	echo ""
 #fi
-icon1="  "
+icon1=""
 
-echo $icon1" "$updates" "
+echo $icon1$updates
 

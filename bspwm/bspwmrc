@@ -1,28 +1,23 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
-#pgrep -x sxhkd > /dev/null || 
 
-#pkill -f testwallpaper
-#pkill -f sleep
 
 sxhkd -c /home/phil/.config/bspwm/sxhkdrc &
-#~/.config/bspwm/cursor.sh &
 
-#killall testwallpaper
-#killall lxpolkit
-#killall xcompmgr
 
-#~/.config/bspwm/testwallpaper &
-
-setxkbmap gb &
+#setxkbmap gb &
+#volumeicon &
 lxpolkit &
 picom &
-#volumeicon &
+
 nm-applet &
-#blueman-applet &
 
+parcellite &
+#clementine &
+lxappearance &
+blueman-applet &
 $HOME/.config/polybar-bspwm/launch.sh &
-
+feh --bg-scale  ~/Pictures/wallpapers/bspwm.jpg &
 ################################Together####
 ####~/.config/bspwm/sta &
 #~/.local/bin/succade &
@@ -82,4 +77,6 @@ bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 #bspc rule -a firefox desktop=^2
 #bspc rule -a Geany desktop=^3
-bspc rule -a Xfce4-terminal state=floating
+#bspc rule -a Xfce4-terminal state=floating
+
+clementine 

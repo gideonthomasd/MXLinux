@@ -242,7 +242,8 @@ client.focused          #bf616a #cecece #000000 #FF0000 #99004C
 
 
 # My commands
-exec_always clementine
+#exec_always clementine
+#sleep 1
 exec_always lxpolkit
 exec_always sxhkd -c /home/phil/.config/i3/sxhkdrc
 #exec_always xcompmgr
@@ -254,3 +255,4 @@ exec_always blueman-applet
 exec_always nm-applet
 
 exec_always $HOME/.config/i3/bin/launchbar.sh
+

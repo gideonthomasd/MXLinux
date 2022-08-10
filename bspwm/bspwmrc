@@ -4,7 +4,7 @@
 
 sxhkd -c /home/phil/.config/bspwm/sxhkdrc &
 
-
+blueman-applet &
 #setxkbmap gb &
 #volumeicon &
 lxpolkit &
@@ -15,7 +15,7 @@ nm-applet &
 parcellite &
 #clementine &
 lxappearance &
-blueman-applet &
+
 $HOME/.config/polybar-bspwm/launch.sh &
 feh --bg-scale  ~/Pictures/wallpapers/bspwm.jpg &
 ################################Together####
@@ -79,4 +79,4 @@ bspc rule -a Screenkey manage=off
 #bspc rule -a Geany desktop=^3
 #bspc rule -a Xfce4-terminal state=floating
 
-clementine 
+#clementine 

@@ -217,7 +217,7 @@ awful.tag(names, s, layouts)
     -- Add widgets to the wibox
     --local my_image = wibox.widget.imagebox("/home/phil/.config/awesome/ram.png", true)
     myicon = awful.widget.launcher({ image = "/home/phil/.config/awesome/menu.png", command = "/home/phil/.config/rofi/launchers/colorful/launcher.sh" })
-    --mymusic = awful.widget.launcher({ image = "/home/phil/.config/awesome/music.png", command = "mocp -G" })
+    mymusic = awful.widget.launcher({ image = "/home/phil/.config/awesome/music.png", command = "mocp -G" })
     myweather = awful.widget.launcher({ image = "/home/phil/.config/awesome/weather.png", command = "lxterminal -e 'curl wttr.in/Caerphilly && read'" })
     myram = awful.widget.launcher({ image = "/home/phil/.config/awesome/ram2.png", command = "lxterminal -e htop" })
     mycalendar = awful.widget.launcher({ image = "/home/phil/.config/awesome/calendar.png", command = "lxterminal -e calcurse" })
@@ -266,9 +266,9 @@ awful.tag(names, s, layouts)
             space,
             
           --  space,
-          --  mymusic,
-          --  awful.widget.watch("/home/phil/.config/awesome/music_state.sh" ,1),
-          --  space,
+          mymusic,
+          awful.widget.watch("/home/phil/.config/awesome/music_state.sh" ,1),
+          space,
 --            mytext,
 			myram,
             awful.widget.watch('bash -c "free -h | awk \'/^Mem/ {print $3}\'"' ,1),  
@@ -667,7 +667,7 @@ beautiful.useless_gap = 5
 
 -- Autostart
 --awful.spawn.with_shell("~/.config/awesome/polybar/launch.sh")
-awful.spawn.with_shell("clementine")
+--awful.spawn.with_shell("clementine")
 awful.spawn.with_shell("parcellite")
 
 --awful.spawn.with_shell("picom --config ~/.config/awesome/picom.conf")

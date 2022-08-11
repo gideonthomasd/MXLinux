@@ -117,6 +117,9 @@ cp -r Bibata-Modern-Ice ~/.icons
 cp -r Bibata-Modern-Amber ~/.icons
 cp -r Bibata-Modern-Classic ~/.icons
 
+mkdir -p ~/.config/gtk-3.0
+cp settings.ini ~/.config/gtk-3.0/settings.ini
+
 cd xfce4
 cp -r * ~/.config/xfce4
 cd ..

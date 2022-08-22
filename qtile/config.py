@@ -305,7 +305,7 @@ screens = [
                 font="Ubuntu Mono",
                 fontsize=18,
                 #background=colors[5],
-                #foreground=colors[1],
+                foreground=colors[1],
                 #colors[0],
                 max_chars = 19,
                 #noplay_color=None,
